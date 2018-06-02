@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.kids.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/good"
+                android:text="fruity kids"
+                android:textAllCaps="true"
+                android:textColor="#af2163"
+                android:textSize="53sp"
+                android:textStyle="bold|bold" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/apple" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="5dp"
+            android:background="#af2163" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Name"
+            android:inputType="textCapWords"
+            android:maxLength="50"
+            android:paddingTop="20dp"
+            android:id="@+id/name"
+
+            />
+
+        <TextView
+            style="@style/subTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Questions" />
+
+        <TextView
+            style="@style/questions"
+            android:text=" 1. What color are apples ?" />
+        <EditText
+            style="@style/questions"
+            android:inputType="textCapWords"
+            android:maxLength="50"
+            android:id="@+id/apples"/>
+
+        <TextView
+            style="@style/questions"
+            android:text=" 2. What fruits have the same color ?" />
+
+       <CheckBox
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           style="@style/questions"
+           android:text="Orange"
+           android:id="@+id/orange"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/questions"
+            android:text="Tangerine"
+            android:id="@+id/tange"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/questions"
+            android:text="Mango"
+            android:id="@+id/mango"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/questions"
+                android:layout_width="wrap_content"
+                android:text=" 3. A watermelon is  " />
+
+            <EditText
+                android:id="@+id/watermelon"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="3" />
+
+            <TextView
+                style="@style/questions"
+                android:layout_width="wrap_content"
+                android:text=" inside .  " />
+        </LinearLayout>
+
+        <TextView
+            style="@style/questions"
+            android:text=" 4. what color are bananas ?" />
+       <RadioGroup
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+           <RadioButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Black"
+               style="@style/questions"
+               android:id="@+id/blackB"/>
+           <RadioButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Yellow"
+               style="@style/questions"
+               android:id="@+id/yellowB"/>
+           <RadioButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Green"
+               style="@style/questions"
+               android:id="@+id/greenB"/>
+       </RadioGroup>
+        <TextView
+            style="@style/questions"
+            android:text=" 5. What is your favorite fruit ?" />
+
+        <EditText
+            style="@style/questions"
+            android:inputType="text"
+            android:maxLength="60"
+            android:id="@+id/favorite"
+             />
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="#af2163"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check Your Answers"
+            android:textSize="15sp"
+            android:onClick="submit"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            style="@style/questions"
+            android:layout_gravity="center_horizontal"
+            android:background="#d7cbd8"
+            android:id="@+id/result"/>
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="#af2163"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Try Again"
+            android:textSize="15sp"
+            android:onClick="restart"
+            android:visibility="gone"
+            android:id="@+id/restart"
+            />
+    </LinearLayout>
+
+
+</ScrollView>
